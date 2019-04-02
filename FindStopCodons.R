@@ -125,25 +125,10 @@ findSTOPS.multiCDS <- function(CDS.list, opts.list=NULL, ...){
 # fastafiles <- paste0(DATA_DIR, dir(DATA_DIR))
 # 
 # CDS.test <- readDNAStringSet( './data/KT876022.fasta' )
-# CDS.test <- readDNAStringSet('./data/combined.fasta')
-# CDS.test.list <- readDNAStringSet(fastafiles[[3]])
-# CDS.test.list2 <- readDNAStringSet( fastafiles )
 # 
 # findSTOPS(CDS.test)
 # length(CDS.test) == length(findSTOPS(CDS.test))
 # 
 # findSTOPS(CDS.test[[1]])
 # length(CDS.test[[1]]) / 3 == length(findSTOPS(CDS.test[[1]]))
-# 
-# findSTOPS.multiCDS(CDS.test.list)
-# length(CDS.test.list) == length(findSTOPS.multiCDS(CDS.test.list))
-# 
-# findSTOPS.multiCDS(CDS.test.list2)
-# length(CDS.test.list2) == length(findSTOPS.multiCDS(CDS.test.list2))
-# 
-# findSTOPS.multiCDS(as.list(CDS.test))
-# length(as.list(CDS.test)) == length(findSTOPS.multiCDS(as.list(CDS.test)))
-
-
-
 
