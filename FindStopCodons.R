@@ -12,7 +12,7 @@ UtoT <- function(string){
   string[string == 'U'] <- 'T'
   return(string)
 }
-# UtoT(c('A','U','G')) == UtoT('A''U''G')
+# UtoT(c('A','U','G')) == UtoT('AUG')
 
 permuteSTOPS <- function(stops){
   # Returns a matrix of all single nucleotide polymorphisms of a given codon in a list of codons
@@ -40,7 +40,7 @@ permuteSTOPS <- function(stops){
 
 findSTOPS <- function(CDS, stops=c('UAG', 'UGA', 'UAA'), start=1, PAM=c(), PAM.offset=c(), inc.position=T, inc.codon=T, PAMonly=F){
   # Find codons in the CDS that can be mutated at a single base to yield a stop codon. If the codon is already a stop codon, the program returns 0 as the mutation index.
-  # Yields a list where each element represents a codon and the format of each element is canonical mutation format e.g. c("AAA", "A", "1537", "T", "UAA") == c(<original_codon>, <original_base>, <mutation_position>, <resulting_base>, <resulting_codon>)
+  # Returns a list where each element represents a codon and the format of each element is canonical mutation format e.g. c("AAA", "A", "1537", "T", "UAA") == c(<original_codon>, <original_base>, <mutation_position>, <resulting_base>, <resulting_codon>)
   # @ param CDS The coding sequence as a DNAStringSet. CDS is a misnomer because the DNSStringSet can include UTRs.
   # @ param stops A vector of stop codons
   # @ param start The +1 position of the coding sequence. The index of A in the AUG start codon.
